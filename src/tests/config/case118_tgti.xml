@@ -1,0 +1,7 @@
+<TGTIConfiguration>
+    <Generator number="3"/>
+    <Simulation maxIter="20" dTime="0.005" endTime="10.0"/>
+    <Parameters R="0.02" Ts="0.10" Tc="0.45" T3="0.0" T4="0.01" T5="50.0" pmax="1.20" pmin="0.30"/>
+    <StandardGeneratorModel enabled="true"/>
+</TGTIConfiguration>
+

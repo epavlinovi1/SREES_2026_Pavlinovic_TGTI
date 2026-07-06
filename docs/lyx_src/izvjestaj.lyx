@@ -1,0 +1,1085 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language bosnian
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification default
+\crossref_package refstyle
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style polish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Turbine Governor Type I
+\end_layout
+
+\begin_layout Standard
+\align center
+Izvještaj projektnog zadatka
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Predmet:
+ Strukture i režimi rada elektroenergetskih sistema
+\end_layout
+
+\begin_layout Standard
+Studentica:
+ Pavlinović Ema
+\end_layout
+
+\begin_layout Standard
+Profesor:
+ prof.
+ dr.
+ Izudin Džafić
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Sarajevo,
+ juli 2026.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Uvod
+\end_layout
+
+\begin_layout Section
+Sažetak
+\end_layout
+
+\begin_layout Standard
+U okviru projekta razvijen je natID/dTwin plugin pod nazivom TGTI.
+ Plugin učitava MATPOWER slučaj,
+ izdvaja podatke o generatorima,
+ bira jedan generator i za njega generiše dinamički model Turbine Governor Type I regulatora.
+ Rezultat konverzije je .dmodl fajl sa DAE modelom i prateći .vmodl fajl za osnovnu vizualizaciju odziva.
+\end_layout
+
+\begin_layout Standard
+Projekat obuhvata C++ implementaciju plugina,
+ grafički interfejs za izbor ulaznih i izlaznih fajlova,
+ XML konfiguraciju parametara,
+ CMake build konfiguraciju i testne MATPOWER primjere.
+ Izvještaj opisuje motivaciju,
+ teorijski model,
+ implementaciju,
+ način korištenja i plan validacije.
+\end_layout
+
+\begin_layout Section
+Uvod
+\end_layout
+
+\begin_layout Standard
+Elektroenergetski sistemi se često analiziraju kroz kombinaciju statičkih podataka mreže i dinamičkih modela pojedinih elemenata.
+ MATPOWER je praktičan format za opis statičkih podataka sistema,
+ dok dTwin/natID okruženje koristi vlastite modele za dinamičku simulaciju.
+ Zadatak ovog projekta je povezati ta dva svijeta kroz konvertor koji iz MATPOWER generatora formira dinamički model turbine i regulatora.
+\end_layout
+
+\begin_layout Standard
+Turbine Governor Type I je pojednostavljen,
+ ali koristan model regulatora brzine turbine.
+ Model opisuje vezu između odstupanja brzine,
+ naredbe snage,
+ ograničenja mehaničke snage i izlaza turbine.
+ U ovom projektu se detaljni TGTI model primjenjuje na jedan izabrani generator,
+ dok ostali generatori ostaju predstavljeni pojednostavljenim konstantnim modelom mehaničke snage.
+\end_layout
+
+\begin_layout Section
+Ciljevi projekta
+\end_layout
+
+\begin_layout Enumerate
+Razviti natID/dTwin plugin koji se gradi kao shared library.
+\end_layout
+
+\begin_layout Enumerate
+Omogućiti korisniku izbor MATPOWER .m fajla,
+ XML konfiguracije i izlaznog .dmodl fajla.
+\end_layout
+
+\begin_layout Enumerate
+Pročitati mpc.baseMVA i mpc.gen matricu iz MATPOWER slučaja.
+\end_layout
+
+\begin_layout Enumerate
+Izračunati p_order = Pg/baseMVA za izabrani generator.
+\end_layout
+
+\begin_layout Enumerate
+Generisati DAE model sa Turbine Governor Type I jednačinama.
+\end_layout
+
+\begin_layout Enumerate
+Dodati osnovni .vmodl fajl za prikaz odziva.
+\end_layout
+
+\begin_layout Enumerate
+Pripremiti smoke-test primjere za case9,
+ case30,
+ case118 i case300.
+\end_layout
+
+\begin_layout Section
+Teorijska osnova modela
+\end_layout
+
+\begin_layout Subsection
+Uloga turbinskog regulatora u elektroenergetskom sistemu
+\end_layout
+
+\begin_layout Standard
+U elektroenergetskom sistemu ravnoteža između proizvedene i potrošeno aktivne snage direktno utiče na frekvenciju sistema.
+ Ako se opterećenje poveća,
+ a mehanička snaga turbine ostane ista,
+ generator usporava i frekvencija opada.
+ Ako je proizvodnja veća od potrošnje,
+ generator ubrzava i frekvencija raste.
+ Zbog toga su turbinski regulatori važan dio analize režima rada elektroenergetskih sistema.
+\end_layout
+
+\begin_layout Standard
+Zadatak regulatora turbine je da,
+ na osnovu odstupanja brzine,
+ promijeni mehaničku snagu koja se dovodi generatoru.
+ U stvarnom sistemu taj proces obuhvata mjerenje brzine,
+ servo mehanizam,
+ ventile,
+ ograničenja snage i samu dinamiku turbine.
+ U računarskom modelu ti fizički procesi se predstavljaju blokovima,
+ prenosnim funkcijama i nelinearnim ograničenjima.
+\end_layout
+
+\begin_layout Subsection
+Per-unit sistem i radna tačka
+\end_layout
+
+\begin_layout Standard
+Elektro energetski proračuni se često rade u per-unit sistemu jer se time pojednostavljuje poređenje veličina različitih naponskih nivoa i nazivnih snaga.
+ MATPOWER slučaj sadrži baznu snagu baseMVA,
+ a aktivna snaga generatora Pg se moče normalizovati izrazom Pg/baseMVA.
+ Ta normalizovana vrijednost u ovom projektu se naziva p_order.
+\end_layout
+
+\begin_layout Standard
+Radna tačka je početno stanje oko kojeg se posmatra dinamika.
+ Ako je generator u MATPOWER slučaju radio sa Pg = 60.97 MW na bazi od 100 MVA,
+ njegova per-unit radna snaga je 0.6097.
+ Kada se ova vrijednost prenese u TGTI model,
+ ona se koristi za inicijalizaciju osnovnih signala regulatora i turbine.
+\end_layout
+
+\begin_layout Subsection
+Modeliranje ograničenja
+\end_layout
+
+\begin_layout Standard
+Turbina i regulator ne mogu proizvesti proizvoljno malu ili proizvoljno veliku mehaničku snagu.
+ Zbog toga model mora imati donju i gornju granicu.
+ U ovom projektu su te granice pmin i pmax,
+ a u .dmodl modelu se primjenjuju funkcijom lim().
+ Ograničenje je važno i numerički i fizički:
+ numerički sprjećava nerealne vrijednosti,
+ a fizički predstavlja radne granice turbine.
+\end_layout
+
+\begin_layout Subsection
+TGTI blok kao pojednostavljen dinamički model
+\end_layout
+
+\begin_layout Standard
+Turbine Governor Type I u ovom projektu nije pun detaljni model svih fizičkih komponenti elektrane,
+ nego inženjerski pojednostavljen blokovski model.
+ Takvi modeli su korisni jer daju dovoljno informacija o dinamičkom odzivu za potrebe sistemskih analiza,
+ a ne zahtijevaju detaljne konstrukcione podatke turbine.
+ Model pokazuje jasnu vezu između radne tačke,
+ regulatora,
+ ograničenja i izlazne mehaničke snage.
+\end_layout
+
+\begin_layout Standard
+TGTI model u implementaciji koristi sljedeće glavne veličine:
+\end_layout
+
+\begin_layout Itemize
+p_order:
+ referentna snaga generatora normalizovana po baseMVA.
+\end_layout
+
+\begin_layout Itemize
+omega_ref:
+ referentna brzina,
+ postavljena na 1.00.
+\end_layout
+
+\begin_layout Itemize
+omega:
+ trenutna brzina,
+ u generisanom modelu inicijalno postavljena na 0.99.
+\end_layout
+
+\begin_layout Itemize
+R:
+ statika regulatora.
+\end_layout
+
+\begin_layout Itemize
+Ts,
+ Tc,
+ T3,
+ T4 i T5:
+ vremenske konstante regulatora i turbine.
+\end_layout
+
+\begin_layout Itemize
+pmin i pmax:
+ ograničenja ulazne mehaničke snage.
+\end_layout
+
+\begin_layout Standard
+Ulazna naredba regulatora dobija se iz razlike referentne i stvarne brzine:
+\end_layout
+
+\begin_layout LyX-Code
+u_g = p_order + (omega_ref - omega) / R
+\end_layout
+
+\begin_layout Standard
+Dinamički dio modela predstavljen je prenosnim funkcijama:
+\end_layout
+
+\begin_layout LyX-Code
+x_g / p_in = 1 / (Ts*s + 1)
+\end_layout
+
+\begin_layout LyX-Code
+x_c / x_g = (T3*s + 1) / (Tc*s + 1)
+\end_layout
+
+\begin_layout LyX-Code
+tau_m / x_c = (T4*s + 1) / (T5*s + 1)
+\end_layout
+
+\begin_layout Standard
+Ograničenje ulazne snage implementirano je nelinearnom relacijom:
+\end_layout
+
+\begin_layout LyX-Code
+p_in = lim(x_g,
+ pmin,
+ pmax)
+\end_layout
+
+\begin_layout Subsection
+Interpretacija parametara
+\end_layout
+
+\begin_layout Standard
+Parametar R predstavlja statiku regulatora.
+ Manja vrijednost R znaci da ce ista promjena brzine izazvati veću promjenu naredbe snage,
+ odnosno agresivniji odziv regulatora.
+ Parametar Ts opisuje dinamiku servo mehanizma koji djeluje na ulaz regulatora.
+ Tc i T3 predstavljaju dio kompenzacije,
+ dok T4 i T5 modeluju dinamiku turbine prema mehaničkom momentu tau_m.
+\end_layout
+
+\begin_layout Standard
+Granice pmin i pmax su važne jer regulator ne smije proizvesti fizički neostvarivu mehaničku snagu.
+ U modelu se ograničenje uvodi funkcijom lim(x_g,
+ pmin,
+ pmax).
+ Time se dobija nelinearni element,
+ sto je razlog da izlazni model nije samo skup linearnih prenosnih funkcija nego DAE model sa dodatnom NLE sekcijom.
+\end_layout
+
+\begin_layout Subsection
+Veza MATPOWER podataka i dinamičkog modela
+\end_layout
+
+\begin_layout Standard
+MATPOWER slučaj prvenstveno opisuje statičko stanje sistema.
+ U ovom projektu se iz njega koristi mpc.baseMVA i matrica mpc.gen.
+ Druga kolona matrice mpc.gen predstavlja aktivnu snagu Pg generatora u MW.
+ Dijeljenjem sa baseMVA dobija se per-unit vrijednost p_order.
+ Ta vrijednost postaje radna tačka TGTI modela.
+\end_layout
+
+\begin_layout Standard
+Na primjer,
+ ako je baseMVA = 100 i generator ima Pg = 71.64,
+ dobija se p_order = 0.7164.
+ Ova vrijednost se zatim koristi kao inicijalna vrijednost za u_g,
+ x_g,
+ p_in,
+ x_c i tau_m.
+ Takav izbor inicijalizacije smanjuje vještački skok na početku simulacije jer regulator počinje blizu radne tačke.
+\end_layout
+
+\begin_layout Section
+Opis implementacije
+\end_layout
+
+\begin_layout Subsection
+Organizacija izvornog koda
+\end_layout
+
+\begin_layout Standard
+Projekat se nalazi u direktoriju src.
+ Korijenski CMakeLists.txt samo prosljeđuje build u naredni direktorij src,
+ gdje se učitavaju natID SDK CMake moduli i TGTIPlugin.cmake.
+ Glavni izvorni fajlovi nalaze se u src/plugin.
+\end_layout
+
+\begin_layout Standard
+Struktura projekta je podijeljena prema namjeni fajlova.
+ src je razvojni dio,
+ tests je dio za provjeru rada,
+ a resursi plugina su odvojeni u src/res.
+ Takva organizacija olakšava čitanje projekta jer se korisnik ne mora kretati kroz veliki broj nepovezanih fajlova.
+ Kada se traži kod konverzije,
+ ide se u src/plugin/ConversionCore.cpp.
+ Kada se traži build konfiguracija,
+ ide se u src/CMakeLists.txt i src/TGTIPlugin.cmake.
+ Kada se traže testni ulazi,
+ ide se u tests/matpower i tests/config.
+\end_layout
+
+\begin_layout Itemize
+TGTIPlugin.h definiše parametre,
+ opcije konverzije,
+ progress strukturu i potpis funkcije createTGTIModel().
+\end_layout
+
+\begin_layout Itemize
+TGTIPlugin.cpp implementira GUI prozor,
+ plugin interfejs i eksportovanu funkciju getPluginInterface().
+\end_layout
+
+\begin_layout Itemize
+ConversionCore.cpp implementira čitanje XML-a,
+ parsiranje MATPOWER fajla,
+ generisanje .dmodl teksta i pisanje izlaznih fajlova.
+\end_layout
+
+\begin_layout Standard
+Pored ova tri glavna fajla,
+ projekat sadrži i resursne XML fajlove.
+ src/res/main.xml registruje podrazumijevanu konfiguraciju,
+ dok src/res/config/tgti_config.xml sadrži početne parametre regulatora.
+ Ovi fajlovi omogućavaju da dio podešavanja bude izvan C++ koda,
+ sto je korisno kada se mijenjaju simulacioni parametri ili parametri regulatora.
+\end_layout
+
+\begin_layout Subsection
+Grafički interfejs
+\end_layout
+
+\begin_layout Standard
+GUI je implementiran kroz klasu SimplePluginView.
+ Korisniku su dostupna polja za MATPOWER case,
+ izlazni .dmodl fajl,
+ XML konfiguraciju,
+ broj generatora,
+ status,
+ progress bar i dva glavna dugmeta:
+ Inspect i Convert.
+ Inspect provjerava da se ulazni fajl moče pročitati i da sadrži mpc.gen.
+ Convert pokreće konverziju u pozadinskom thread-u.
+\end_layout
+
+\begin_layout Standard
+Konverzija je odvojena od GUI niti.
+ Worker thread izvršava createTGTIModel(),
+ a progress thread periodički čita ConversionProgress i ažurira progress bar i statusni tekst.
+ Time se izbjegava blokiranje prozora tokom čitanja,
+ generisanja i pisanja izlaznih fajlova.
+\end_layout
+
+\begin_layout Subsection
+Tok konverzije
+\end_layout
+
+\begin_layout Enumerate
+Učita se XML konfiguracija ako je navedena.
+\end_layout
+
+\begin_layout Enumerate
+Pročita se MATPOWER fajl i parsiraju se mpc.baseMVA i mpc.gen.
+\end_layout
+
+\begin_layout Enumerate
+Odredi se izabrani generator.
+ Ako je broj izvan dozvoljenog opsega,
+ vrijednost se ograničava na najbliži postojeći generator.
+\end_layout
+
+\begin_layout Enumerate
+Izračuna se p_order iz druge kolone mpc.gen matrice.
+\end_layout
+
+\begin_layout Enumerate
+Generise se Header,
+ Model,
+ Vars,
+ Params,
+ TFs i NLEs sekcija .dmodl fajla.
+\end_layout
+
+\begin_layout Enumerate
+Upise se .dmodl fajl i generiše .vmodl fajl istog osnovnog imena.
+\end_layout
+
+\begin_layout Subsection
+Algoritam konverzije
+\end_layout
+
+\begin_layout Standard
+Algoritam konverzije može se zapisati kao niz determinističkih koraka.
+ Prvo se formira lokalna kopija opcija kako bi se ulazni objekat sačuvao od izmjena.
+ Zatim se XML konfiguracija primjenjuje preko te lokalne kopije.
+ Nakon toga se učitava MATPOWER slučaj.
+ Ako bilo koji od tih koraka ne uspije,
+ funkcija prekida rad i postavlja failed status.
+\end_layout
+
+\begin_layout LyX-Code
+options = inputOptions
+\end_layout
+
+\begin_layout LyX-Code
+applyXmlConfig(options.configFileName,
+ options)
+\end_layout
+
+\begin_layout LyX-Code
+mpCase = loadMatpowerCase(inputFileName)
+\end_layout
+
+\begin_layout LyX-Code
+selected = clamp(options.generatorNo,
+ 1,
+ numberOfGenerators)
+\end_layout
+
+\begin_layout LyX-Code
+pOrder = mpCase.genRows[selected - 1][1] / mpCase.baseMVA
+\end_layout
+
+\begin_layout LyX-Code
+appendTGTIModel(modelText,
+ options,
+ mpCase)
+\end_layout
+
+\begin_layout LyX-Code
+writeOutputFile(outFileName,
+ modelText)
+\end_layout
+
+\begin_layout Standard
+Posebno je važno ograničavanje selected vrijednosti.
+ Ako korisnik unese generator broj 0 ili negativan broj,
+ koristi se prvi generator.
+ Ako unese broj veći od broja generatora u slučaju,
+ koristi se zadnji dostupni generator.
+ Time se izbjegava indeksiranje izvan opsega matrice.
+\end_layout
+
+\begin_layout Subsection
+Threading i korisničko iskustvo
+\end_layout
+
+\begin_layout Standard
+Konverzija se ne izvršava direktno u GUI callback-u,
+ nego u odvojenom worker thread-u.
+ Razlog je praktičan:
+ čitanje većih fajlova,
+ generisanje teksta i pisanje izlaza mogu trajati dovoljno dugo da bi korisnički interfejs izgledao zamrznuto.
+ Odvojeni progress thread svakih 100 ms čita percent vrijednost i statusnu poruku,
+ pa korisnik vidi u kojoj je fazi konverzija.
+\end_layout
+
+\begin_layout Standard
+U implementaciji su faze napretka postavljene na 5%,
+ 25%,
+ 55%,
+ 75%,
+ 90% i 100%.
+ Te vrijednosti nisu numerička mjera trajanja svake operacije,
+ nego orijentaciona informacija o fazi procesa:
+ XML,
+ MATPOWER,
+ generisanje modela,
+ plugin arhive,
+ pisanje izlaza i završetak.
+\end_layout
+
+\begin_layout Section
+Način korištenja razvijenog alata
+\end_layout
+
+\begin_layout Standard
+Korisnik najprije treba pripremiti MATPOWER .m fajl.
+ Minimalno je potrebno da fajl sadrži mpc.baseMVA i mpc.gen matricu.
+ Zatim se priprema XML konfiguracija koja određuje broj generatora i parametre TGTI modela.
+ Ako se koristi jedan od testnih slučajeva iz projekta,
+ odgovarajući XML fajl već postoji u tests/config direktoriju.
+\end_layout
+
+\begin_layout Standard
+Nakon pokretanja plugina u dTwin/natID host aplikaciji,
+ korisnik bira MATPOWER ulaz,
+ izlaznu .dmodl putanju i XML konfiguraciju.
+ Dugme Inspect sluzi kao brza provjera ulaza.
+ Dugme Convert pokreće stvarnu konverziju.
+ Na kraju procesa korisnik treba dobiti .dmodl fajl i .vmodl fajl.
+\end_layout
+
+\begin_layout Standard
+Najvažnija provjera izlaza je p_order.
+ Korisnik treba otvoriti MATPOWER fajl,
+ pronaći red izabranog generatora i drugu kolonu Pg,
+ zatim izračunati Pg/baseMVA.
+ Dobijena vrijednost treba se pojaviti u Params sekciji .dmodl fajla.
+ Time se potvrđuje da je izabran pravi generator i da je osnovna veza između MATPOWER ulaza i TGTI modela ispravna.
+\end_layout
+
+\begin_layout Section
+Ulazni i izlazni fajlovi
+\end_layout
+
+\begin_layout Subsection
+MATPOWER ulaz
+\end_layout
+
+\begin_layout Standard
+Parser je namjenski i ne pokriva kompletan MATLAB jezik.
+ Za potrebe projekta čita redove koji sadrže mpc.baseMVA i numeričke redove mpc.gen matrice.
+ Komentari poslije znaka % se uklanjaju prije parsiranja.
+\end_layout
+
+\begin_layout Standard
+Primjer iz case9.m:
+\end_layout
+
+\begin_layout LyX-Code
+mpc.baseMVA = 100;
+\end_layout
+
+\begin_layout LyX-Code
+mpc.gen = [
+\end_layout
+
+\begin_layout LyX-Code
+    1 71.64 27.05 300 -300 1.04 100 1 250 10;
+\end_layout
+
+\begin_layout LyX-Code
+    2 163.00 6.70 300 -300 1.025 100 1 300 10;
+\end_layout
+
+\begin_layout LyX-Code
+    3 85.00 -10.90 300 -300 1.025 100 1 270 10;
+\end_layout
+
+\begin_layout LyX-Code
+];
+\end_layout
+
+\begin_layout Standard
+Za prvi generator u ovom primjeru p_order iznosi 71.64/100 = 0.7164.
+\end_layout
+
+\begin_layout Subsection
+XML konfiguracija
+\end_layout
+
+\begin_layout Standard
+XML konfiguracija definiše broj generatora,
+ simulacione parametre i parametre regulatora.
+ Podrazumijevani fajl je src/res/config/tgti_config.xml.
+ Testni direktorij sadrži i posebne konfiguracije za svaki case.
+\end_layout
+
+\begin_layout LyX-Code
+<Generator number="1"/>
+\end_layout
+
+\begin_layout LyX-Code
+<Simulation maxIter="20" dTime="0.005" endTime="10.0"/>
+\end_layout
+
+\begin_layout LyX-Code
+<Parameters R="0.02" Ts="0.10" Tc="0.45" T3="0.0" T4="0.01" T5="50.0" pmax="1.20" pmin="0.30"/>
+\end_layout
+
+\begin_layout Subsection
+Izlazni .dmodl i .vmodl
+\end_layout
+
+\begin_layout Standard
+Izlazni .dmodl fajl je glavni digitalni model za dTwin simulaciju.
+ Sadrži inicijalne vrijednosti varijabli,
+ parametre regulatora,
+ prenosne funkcije i nelinearne jednačine.
+ Izlazni .vmodl fajl dodaje osnovni linePlot za signale p_in,
+ x_g,
+ x_c i tau_m.
+\end_layout
+
+\begin_layout Subsection
+Struktura .dmodl izlaza
+\end_layout
+
+\begin_layout Standard
+Header sekcija definiše osnovne simulacione postavke:
+ broj iteracija,
+ tekstualni izlaz,
+ početno vrijeme,
+ vremenski korak i krajnje vrijeme.
+ Model sekcija zatim deklariše tip DAE,
+ realni domen i metodu RK4.
+ Vars sekcija sadrži dinamičke varijable i inicijalne vrijednosti.
+ Params sekcija sadrži parametre koji su korisni za simulaciju i eventualni ispis.
+\end_layout
+
+\begin_layout Standard
+TFs sekcija je pogodna za prenosne funkcije regulatora jer jasno prikazuje dinamiku blokova.
+ NLEs sekcija odvaja nelinearne i algebarske relacije,
+ kao sto su ograničenje p_in i konstantni modeli ostalih generatora.
+ Ova organizacija izlaza olakšava čitanje i kasnije ručno proširivanje modela.
+\end_layout
+
+\begin_layout Section
+Build konfiguracija
+\end_layout
+
+\begin_layout Standard
+Build sistem je zasnovan na CMake-u.
+ Projekat očekuje natID SDK u korisničkom direktoriju,
+ npr.
+ %USERPROFILE%/natID.SDK na Windows sistemu.
+ U src/CMakeLists.txt uključuju se Common.cmake,
+ natGUI.cmake,
+ MatrixLib.cmake i SymbComp.cmake.
+\end_layout
+
+\begin_layout Standard
+Komande za build:
+\end_layout
+
+\begin_layout LyX-Code
+cmake -S .
+ -B out/build
+\end_layout
+
+\begin_layout LyX-Code
+cmake --build out/build --config Debug
+\end_layout
+
+\begin_layout Standard
+CMake target se zove tgti.
+ Na Windows sistemu rezultat je .dll plugin,
+ dok se na drugim platformama gradi odgovarajuća shared library datoteka.
+ TGTIPlugin.cmake linkuje natID runtime biblioteke i uključuje kompatibilni MemoryOut header ako ga lokalni SDK nema.
+\end_layout
+
+\begin_layout Section
+Testiranje
+\end_layout
+
+\begin_layout Standard
+Direktorij tests sadrži test ulaze za case9,
+ case30,
+ case118 i case300.
+ 
+\end_layout
+
+\begin_layout Standard
+Primjeri provjera:
+\end_layout
+
+\begin_layout Enumerate
+case9.m ima baseMVA = 100 i tri generatora.
+\end_layout
+
+\begin_layout Enumerate
+case30.m ima baseMVA = 100 i tri generatora u trenutnom smoke-test fajlu.
+\end_layout
+
+\begin_layout Enumerate
+case30_tgti.xml bira generator broj 2,
+ pa se p_order računa iz drugog reda mpc.gen.
+\end_layout
+
+\begin_layout Enumerate
+Nakon konverzije treba postojati .dmodl fajl i .vmodl fajl istog osnovnog imena.
+\end_layout
+
+\begin_layout Enumerate
+U .dmodl fajlu treba provjeriti da su R,
+ Ts,
+ Tc,
+ T3,
+ T4,
+ T5,
+ pmax i pmin preuzeti iz XML konfiguracije.
+\end_layout
+
+\begin_layout Subsection
+Očekivane vrijednosti za smoke-test slučajeve
+\end_layout
+
+\begin_layout Standard
+Za case9.m konfiguracija bira generator 1.
+ Posto je Pg = 71.64 i baseMVA = 100,
+ očekivani p_order je 0.7164.
+ U izlaznom .dmodl fajlu treba tražiti liniju p_order = 0.7164 i inicijalne vrijednosti u_g,
+ x_g,
+ p_in,
+ x_c i tau_m oko iste vrijednosti.
+\end_layout
+
+\begin_layout Standard
+Za case30.m konfiguracija bira generator 2.
+ Drugi red ima Pg = 60.97,
+ pa je p_order = 0.6097.
+ Ostali generatori treba da dobiju placeholder varijable tau_m_1 i tau_m_3 sa p_order_1 = 0.2354 i p_order_3 = 0.2159.
+\end_layout
+
+\begin_layout Standard
+Za case118.m konfiguracija bira generator 3.
+ U trenutnom smoke-test fajlu treći generator ima Pg = 0.0,
+ pa je p_order = 0.0.
+ Ovaj slučaj je koristan za provjeru da konvertor prihvata i generator koji je u datom radnom stanju bez aktivne snage.
+\end_layout
+
+\begin_layout Standard
+Za case300.m konfiguracija bira generator 4.
+ Četvrti red ima Pg = 120.00,
+ pa je p_order = 1.2.
+ Ovaj slučaj je koristan jer je p_order jednak podrazumijevanom pmax = 1.20,
+ pa se moče posmatrati ponašanje modela na gornjoj granici.
+\end_layout
+
+\begin_layout Subsection
+Plan numeričke validacije
+\end_layout
+
+\begin_layout Standard
+Nakon sto se plugin izgradi i pokrene u dTwin okruženju,
+ validaciju treba proširiti izvan smoke-test provjera.
+ Prvi korak je potvrditi da se generisani .dmodl fajl učitava bez sintaksnih grešaka.
+ Drugi korak je pokrenuti kratku simulaciju i provjeriti da signali p_in,
+ x_g,
+ x_c i tau_m ostaju konačni i razumni.
+ Treći korak je promijeniti omega ili parametre regulatora i provjeriti da se odziv mijenja u očekivanom smjeru.
+\end_layout
+
+\begin_layout Standard
+Za parametarsku validaciju korisno je uporediti vise vrijednosti R.
+ Manji R treba dati jaču korekciju snage za isto odstupanje brzine.
+ Promjena Ts treba uticati na brzinu odziva prvog bloka,
+ dok T5 treba znatno uticati na sporiji dio turbine.
+ Takva analiza nije samo provjera koda,
+ nego i provjera da model ponaša u skladu sa fizičkom interpretacijom parametara.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rezultati
+\end_layout
+
+\begin_layout Standard
+Rezultat razvoja je funkcionalna struktura plugina sa GUI prozorom,
+ pozadinskom konverzijom i generatorom dTwin modela.
+ Plugin formira TGTI jednačine za izabrani generator i dodaje placeholder mehaničku snagu za ostale generatore.
+ Implementiran je i progress sistem koji korisniku prikazuje trenutnu fazu rada.
+\end_layout
+
+\begin_layout Standard
+Očekivani status uspješne konverzije je:
+\end_layout
+
+\begin_layout LyX-Code
+Conversion completed.
+ Matching .vmodl plot file was created.
+\end_layout
+
+\begin_layout Standard
+Na nivou projekta,
+ rezultat nije samo jedan izlazni fajl nego čitav mali alat za ponovljivu konverziju.
+ Isti programski tok moče se primijeniti na više MATPOWER slučajeva i više XML konfiguracija.
+ Time se smanjuje potreba za ručnim pisanjem dTwin modela,
+ a smanjuje se i vjerovatnoća greške u ponavljajućim dijelovima modela.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename gui.png
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Izgled GUI-a plugina
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename primjer_modela.png
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kod dobijenog modela
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename grafik.png
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Grafik dobijen za ovaj primjer
+\end_layout
+
+\begin_layout Section
+Diskusija implementacijskih odluka
+\end_layout
+
+\begin_layout Standard
+Jedna od važnih odluka je bila zadržati parser jednostavnim.
+ Za potrebe ovog projekta to je prihvatljivo jer se čitaju samo baseMVA i mpc.gen.
+ Prednost je manji kod i manje zavisnosti.
+ Nedostatak je što parser ne moče pouzdano obraditi sve moguće MATLAB konstrukcije.
+ Ako projekat preraste u opšti MATPOWER konvertor,
+ parser treba zamijeniti robusnijim rješenjem.
+\end_layout
+
+\begin_layout Standard
+Druga odluka je da se detaljni TGTI model generiše samo za jedan generator.
+ To odgovara projektnom zadatku i čini izlaz preglednim.
+ Istovremeno,
+ arhitektura se moče proširiti tako da XML konfiguracija sadrži listu generatora i zasebne parametre za svaki generator.
+ Tada bi appendTGTIModel() mogao iterirati kroz više TGTI blokova,
+ a ne samo kroz jedan izabrani red.
+\end_layout
+
+\begin_layout Standard
+Treća odluka je da GUI bude jednostavan i fokusiran na osnovni tok.
+ Korisnik ne mora znati unutrašnju strukturu .dmodl fajla,
+ nego bira ulaz,
+ konfiguraciju i izlaz.
+ 
+\end_layout
+
+\begin_layout Section
+Ograničenja i moguća poboljšanja
+\end_layout
+
+\begin_layout Itemize
+MATPOWER parser je namjenski i treba ga proširiti ako se očekuju složeniji MATLAB zapisi.
+\end_layout
+
+\begin_layout Itemize
+XML čitanje se oslanja na jednostavno traženje atributa i može se zamijeniti punim XML parserom.
+\end_layout
+
+\begin_layout Itemize
+Visual model je osnovni plot i može se proširiti potpunom dTwin shemom kada format bude definisan.
+\end_layout
+
+\begin_layout Itemize
+Smoke-test ulazi treba zamijeniti potpunim benchmark slučajevima prije konačne numeričke validacije.
+\end_layout
+
+\begin_layout Itemize
+Trenutno se detaljni TGTI model primjenjuje na jedan generator;
+ buduća verzija može podržati više regulatora u istom modelu.
+\end_layout
+
+\begin_layout Section
+Zaključak
+\end_layout
+
+\begin_layout Standard
+Projekat TGTI pokazuje kako se MATPOWER podaci mogu iskoristiti za automatsko formiranje dTwin dinamičkog modela.
+ Implementirani plugin pokriva osnovni tok od izbora ulaznih fajlova do generisanja .dmodl i .vmodl izlaza.
+ Najvažniji doprinos projekta je povezivanje statičkog opisa generatora sa Turbine Governor Type I dinamičkim modelom,
+ uz mogućnost konfiguracije parametara preko XML fajla.
+\end_layout
+
+\begin_layout Standard
+Nakon build-a u okruženju sa natID SDK-om i validacije na zvaničnim test slučajevima,
+ projekat se može koristiti kao osnova za šire modele regulatora i za poređenje odziva različitih generatorskih jedinica u dTwin simulacijama.
+\end_layout
+
+\begin_layout Section
+Literatura i izvori
+\end_layout
+
+\begin_layout Enumerate
+MATPOWER case format i mpc struktura.
+\end_layout
+
+\begin_layout Enumerate
+natID/dTwin SDK i primjeri plugina 
+\end_layout
+
+\begin_layout Enumerate
+F.
+ Milano,
+ Power System Modelling and Scripting.
+ Springer,
+ 2010.
+\end_layout
+
+\end_body
+\end_document

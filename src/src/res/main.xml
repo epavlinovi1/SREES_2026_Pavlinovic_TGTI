@@ -1,0 +1,6 @@
+<Resources>
+    <Files>
+        <File id="defaultConfig" file="config/tgti_config.xml"/>
+    </Files>
+</Resources>
+

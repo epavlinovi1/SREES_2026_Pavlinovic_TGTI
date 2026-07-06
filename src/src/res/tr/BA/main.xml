@@ -1,0 +1,28 @@
+<Translation>
+    <String id="pluginTitle" value="Turbine Governor Type I"/>
+    <String id="converter" value="Konvertor"/>
+    <String id="options" value="Opcije"/>
+    <String id="preview" value="Pregled"/>
+    <String id="inputMatpower" value="MATPOWER slucaj:"/>
+    <String id="outputModel" value="Izlazni .dmodl:"/>
+    <String id="configXml" value="Konfiguracijski XML:"/>
+    <String id="generatorNo" value="Broj generatora:"/>
+    <String id="status" value="Status:"/>
+    <String id="progress" value="Progres:"/>
+    <String id="select" value="..."/>
+    <String id="inspect" value="Pregledaj"/>
+    <String id="convert" value="Konvertuj"/>
+    <String id="modelName" value="Naziv modela:"/>
+    <String id="maxIter" value="Maks. iteracija:"/>
+    <String id="dTime" value="dT:"/>
+    <String id="endTime" value="Kraj simulacije:"/>
+    <String id="standardGenerators" value="Standardni model za ostale generatore"/>
+    <String id="openMatpower" value="Otvori MATPOWER slucaj"/>
+    <String id="openXml" value="Otvori XML konfiguraciju"/>
+    <String id="saveDmodl" value="Spasi dTwin model"/>
+    <String id="idle" value="Spremno"/>
+    <String id="running" value="Konverzija u toku..."/>
+    <String id="done" value="Konverzija zavrsena"/>
+    <String id="failed" value="Konverzija neuspjesna"/>
+</Translation>
+

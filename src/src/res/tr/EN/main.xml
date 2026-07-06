@@ -1,0 +1,28 @@
+<Translation>
+    <String id="pluginTitle" value="Turbine Governor Type I"/>
+    <String id="converter" value="Converter"/>
+    <String id="options" value="Options"/>
+    <String id="preview" value="Preview"/>
+    <String id="inputMatpower" value="MATPOWER case:"/>
+    <String id="outputModel" value="Output .dmodl:"/>
+    <String id="configXml" value="Configuration XML:"/>
+    <String id="generatorNo" value="Generator number:"/>
+    <String id="status" value="Status:"/>
+    <String id="progress" value="Progress:"/>
+    <String id="select" value="..."/>
+    <String id="inspect" value="Inspect"/>
+    <String id="convert" value="Convert"/>
+    <String id="modelName" value="Model name:"/>
+    <String id="maxIter" value="Max iterations:"/>
+    <String id="dTime" value="dT:"/>
+    <String id="endTime" value="End time:"/>
+    <String id="standardGenerators" value="Standard model for other generators"/>
+    <String id="openMatpower" value="Open MATPOWER case"/>
+    <String id="openXml" value="Open XML configuration"/>
+    <String id="saveDmodl" value="Save dTwin model"/>
+    <String id="idle" value="Idle"/>
+    <String id="running" value="Conversion running..."/>
+    <String id="done" value="Conversion completed"/>
+    <String id="failed" value="Conversion failed"/>
+</Translation>
+

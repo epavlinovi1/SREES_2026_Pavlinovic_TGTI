@@ -1,0 +1,10 @@
+<DevRes>
+    <Languages default="EN">
+        <Language id="EN" name="English"/>
+        <Language id="BA" name="Bosanski"/>
+    </Languages>
+    <Resources>
+        <ResConfig file="main.xml"/>
+    </Resources>
+</DevRes>
+

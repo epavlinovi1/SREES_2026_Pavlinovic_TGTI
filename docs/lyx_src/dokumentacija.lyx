@@ -1,0 +1,1237 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language bosnian
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification default
+\crossref_package refstyle
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\spellchecker_ignore bosnian Governor
+\spellchecker_ignore bosnian Type
+\spellchecker_ignore bosnian elektroenergetskih
+\spellchecker_ignore bosnian Pavlinović
+\spellchecker_ignore bosnian Ema
+\spellchecker_ignore bosnian dr
+\spellchecker_ignore bosnian Izudin
+\spellchecker_ignore bosnian Džafić
+\spellchecker_ignore bosnian TGTI
+\spellchecker_ignore bosnian natID
+\spellchecker_ignore bosnian dTwin
+\spellchecker_ignore bosnian MATPOWER
+\spellchecker_ignore bosnian C
+\spellchecker_ignore bosnian shared
+\spellchecker_ignore bosnian library
+\spellchecker_ignore bosnian plugin
+\spellchecker_ignore bosnian eksportovane
+\spellchecker_ignore bosnian getPluginInterface
+\spellchecker_ignore bosnian m
+\spellchecker_ignore bosnian dmodl
+\spellchecker_ignore bosnian opcioni
+\spellchecker_ignore bosnian XML
+\spellchecker_ignore bosnian konfiguracioni
+\spellchecker_ignore bosnian Plugin
+\spellchecker_ignore bosnian parsira
+\spellchecker_ignore bosnian mpc
+\spellchecker_ignore bosnian dinamicki
+\spellchecker_ignore bosnian seminarski
+\spellchecker_ignore bosnian build
+\spellchecker_ignore bosnian README
+\spellchecker_ignore bosnian md
+\spellchecker_ignore bosnian src
+\spellchecker_ignore bosnian CMake
+\spellchecker_ignore bosnian plugina
+\spellchecker_ignore bosnian GUI
+\spellchecker_ignore bosnian header
+\spellchecker_ignore bosnian MemoryOut
+\spellchecker_ignore bosnian TGTIPlugin
+\spellchecker_ignore bosnian cpp
+\spellchecker_ignore bosnian h
+\spellchecker_ignore bosnian ConversionCore
+\spellchecker_ignore bosnian res
+\spellchecker_ignore bosnian tests
+\spellchecker_ignore bosnian docs
+\spellchecker_ignore bosnian LyX
+\spellchecker_ignore bosnian SDK
+\spellchecker_ignore bosnian target
+\spellchecker_ignore bosnian tgti
+\spellchecker_ignore bosnian cmake
+\spellchecker_ignore bosnian include
+\spellchecker_ignore bosnian linkuje
+\spellchecker_ignore bosnian natGUI
+\spellchecker_ignore bosnian MatrixLib
+\spellchecker_ignore bosnian SymbComp
+\spellchecker_ignore bosnian runtime
+\spellchecker_ignore bosnian dugmadima
+\spellchecker_ignore bosnian threadovima
+\spellchecker_ignore bosnian podatkovne
+\spellchecker_ignore bosnian konverzijsko
+\spellchecker_ignore bosnian parsiranje
+\spellchecker_ignore bosnian main
+\spellchecker_ignore bosnian xml
+\spellchecker_ignore bosnian config
+\spellchecker_ignore bosnian simulacionih
+\spellchecker_ignore bosnian tr
+\spellchecker_ignore bosnian EN
+\spellchecker_ignore bosnian BA
+\spellchecker_ignore bosnian matpower
+\spellchecker_ignore bosnian smoke-test
+\spellchecker_ignore bosnian validaciju
+\spellchecker_ignore bosnian benchmark
+\spellchecker_ignore bosnian notes
+\spellchecker_ignore bosnian lyx
+\spellchecker_ignore bosnian assets
+\spellchecker_ignore bosnian baseMVA
+\spellchecker_ignore bosnian DAE
+\spellchecker_ignore bosnian vmodl
+\spellchecker_ignore bosnian elektroenergetskom
+\spellchecker_ignore bosnian reaktivne
+\spellchecker_ignore bosnian Pg
+\spellchecker_ignore bosnian linearizovati
+\spellchecker_ignore bosnian inicijalizovati
+\spellchecker_ignore bosnian p
+\spellchecker_ignore bosnian order
+\spellchecker_ignore bosnian per-unit
+\spellchecker_ignore bosnian kompenzacionih
+\spellchecker_ignore bosnian ogranicava
+\spellchecker_ignore bosnian pmin
+\spellchecker_ignore bosnian pmax
+\spellchecker_ignore bosnian g
+\spellchecker_ignore bosnian x
+\spellchecker_ignore bosnian in
+\spellchecker_ignore bosnian c
+\spellchecker_ignore bosnian tau
+\spellchecker_ignore bosnian ref
+\spellchecker_ignore bosnian R
+\spellchecker_ignore bosnian Ts
+\spellchecker_ignore bosnian Tc
+\spellchecker_ignore bosnian servomotora
+\spellchecker_ignore bosnian kompenzatora
+\spellchecker_ignore bosnian Konverter
+\spellchecker_ignore bosnian Parser
+\spellchecker_ignore bosnian MATLAB
+\spellchecker_ignore bosnian normalizuje
+\spellchecker_ignore bosnian opciona
+\spellchecker_ignore bosnian number
+\spellchecker_ignore bosnian Simulation
+\spellchecker_ignore bosnian maxIter
+\spellchecker_ignore bosnian dTime
+\spellchecker_ignore bosnian endTime
+\spellchecker_ignore bosnian TGTIConfiguration
+\spellchecker_ignore bosnian Parameters
+\spellchecker_ignore bosnian Header
+\spellchecker_ignore bosnian neizabrani
+\spellchecker_ignore bosnian sc
+\spellchecker_ignore bosnian IPlugin
+\spellchecker_ignore bosnian show
+\spellchecker_ignore bosnian getMenuName
+\spellchecker_ignore bosnian getArchive
+\spellchecker_ignore bosnian getArchives
+\spellchecker_ignore bosnian getOutFileName
+\spellchecker_ignore bosnian getMaxSupportedArchiveParts
+\spellchecker_ignore bosnian getModelType
+\spellchecker_ignore bosnian vraca
+\spellchecker_ignore bosnian hostu
+\spellchecker_ignore bosnian SimplePluginView
+\spellchecker_ignore bosnian progress
+\spellchecker_ignore bosnian Inspect
+\spellchecker_ignore bosnian Convert
+\spellchecker_ignore bosnian pokrece
+\spellchecker_ignore bosnian worker
+\spellchecker_ignore bosnian thread-u
+\spellchecker_ignore bosnian thread
+\spellchecker_ignore bosnian ConversionProgress
+\spellchecker_ignore bosnian gui
+\spellchecker_ignore bosnian ProgressIndicator
+\spellchecker_ignore bosnian Destruktor
+\spellchecker_ignore bosnian view-a
+\spellchecker_ignore bosnian join-uje
+\spellchecker_ignore bosnian threadove
+\spellchecker_ignore bosnian Konverzijsko
+\spellchecker_ignore bosnian createTGTIModel
+\spellchecker_ignore bosnian failed
+\spellchecker_ignore bosnian flag
+\spellchecker_ignore bosnian Build
+\spellchecker_ignore bosnian USERPROFILE
+\spellchecker_ignore bosnian HOME
+\spellchecker_ignore bosnian Unix-like
+\spellchecker_ignore bosnian txt
+\spellchecker_ignore bosnian SDK-a
+\spellchecker_ignore bosnian -B
+\spellchecker_ignore bosnian out
+\spellchecker_ignore bosnian --build
+\spellchecker_ignore bosnian --config
+\spellchecker_ignore bosnian Debug
+\spellchecker_ignore bosnian dll
+\spellchecker_ignore bosnian Windowsu
+\spellchecker_ignore bosnian dylib
+\spellchecker_ignore bosnian macOS-u
+\spellchecker_ignore bosnian so
+\spellchecker_ignore bosnian RELEASE
+\spellchecker_ignore bosnian NATID
+\spellchecker_ignore bosnian RUNTIME
+\spellchecker_ignore bosnian ukljucena
+\spellchecker_ignore bosnian hostom
+\spellchecker_ignore bosnian host
+\spellchecker_ignore bosnian case
+\spellchecker_ignore bosnian Output
+\spellchecker_ignore bosnian ce
+\spellchecker_ignore bosnian Configuration
+\spellchecker_ignore bosnian Params
+\spellchecker_ignore bosnian TFs
+\spellchecker_ignore bosnian NLEs
+\spellchecker_ignore bosnian foldera
+\spellchecker_ignore bosnian korisničog
+\spellchecker_ignore bosnian Treci
+\spellchecker_ignore bosnian TGTIOptions
+\spellchecker_ignore bosnian LineEdit
+\spellchecker_ignore bosnian NumericEdit
+\spellchecker_ignore bosnian collectOptions
+\spellchecker_ignore bosnian configFileName
+\spellchecker_ignore bosnian generatorNo
+\spellchecker_ignore bosnian applyXmlConfig
+\spellchecker_ignore bosnian loadMatpowerCase
+\spellchecker_ignore bosnian ucitava
+\spellchecker_ignore bosnian appendTGTIModel
+\spellchecker_ignore bosnian writeOutputFile
+\spellchecker_ignore bosnian appendTGTIVisualModel
+\spellchecker_ignore bosnian writeTextFile
+\spellchecker_ignore bosnian parsiranja
+\spellchecker_ignore bosnian vec
+\spellchecker_ignore bosnian TGTIParameters
+\spellchecker_ignore bosnian modelName
+\spellchecker_ignore bosnian selectedCaseName
+\spellchecker_ignore bosnian useStandardForOthers
+\spellchecker_ignore bosnian thread-a
+\spellchecker_ignore bosnian percent
+\spellchecker_ignore bosnian running
+\spellchecker_ignore bosnian completed
+\spellchecker_ignore bosnian mutex-om
+\spellchecker_ignore bosnian hosta
+\spellchecker_ignore bosnian file-only
+\spellchecker_ignore bosnian Vars
+\spellchecker_ignore bosnian placeholder
+\spellchecker_ignore bosnian end
+\spellchecker_ignore bosnian ERROR
+\spellchecker_ignore bosnian Cannot
+\spellchecker_ignore bosnian open
+\spellchecker_ignore bosnian matrix
+\spellchecker_ignore bosnian was
+\spellchecker_ignore bosnian not
+\spellchecker_ignore bosnian found
+\spellchecker_ignore bosnian nekonzistentna
+\spellchecker_ignore bosnian write
+\spellchecker_ignore bosnian output
+\spellchecker_ignore bosnian feedback
+\spellchecker_ignore bosnian validacija
+\spellchecker_ignore bosnian validacije
+\spellchecker_ignore bosnian SDK-om
+\spellchecker_ignore bosnian Conversion
+\spellchecker_ignore bosnian Matching
+\spellchecker_ignore bosnian created
+\spellchecker_ignore bosnian parser
+\spellchecker_ignore bosnian konfigurabilne
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Turbine Governor Type I
+\end_layout
+
+\begin_layout Standard
+\align center
+Dokumentacija projektnog zadatka
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Predmet:
+ Strukture i režimi rada elektroenergetskih sistema
+\end_layout
+
+\begin_layout Standard
+Studentica:
+ Pavlinović Ema
+\end_layout
+
+\begin_layout Standard
+Profesor:
+ prof.
+ dr.
+ Izudin Džafić
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Uvod
+\end_layout
+
+\begin_layout Standard
+TGTI je natID/dTwin plugin čiji je cilj konverzija MATPOWER slučaja u dTwin dinamički model generatora sa Turbine Governor Type I regulatorom.
+ Projekat je organizovan kao C++ shared library plugin i prati obrazac natID/dTwin plugin interfejsa preko eksportovane funkcije getPluginInterface().
+\end_layout
+
+\begin_layout Standard
+Korisnik kroz grafički interfejs bira MATPOWER .m fajl,
+ izlazni .dmodl fajl i opcioni XML konfiguracioni fajl.
+ Plugin zatim parsira matricu generatora mpc.gen,
+ izabranom generatoru dodjeljuje TGTI dinamički model,
+ a ostalim generatorima dodaje standardni mehanički model konstantne snage.
+\end_layout
+
+\begin_layout Section
+Namjena dokumentacije
+\end_layout
+
+\begin_layout Standard
+Ovaj dokument je zamišljen kao projektna dokumentacija,
+ a ne samo kao seminarski izvještaj.
+ Zbog toga je naglasak na tome kako je projekat organizovan,
+ koji fajlovi imaju koju ulogu,
+ kako se plugin gradi,
+ kako se koristi i kako se provjerava ispravnost izlaznih fajlova.
+ Izvještaj daje šire objašnjenje problema,
+ teorije i rezultata,
+ dok dokumentacija treba pomoći osobi koja želi nastaviti rad na kodu ili ponoviti konverziju.
+\end_layout
+
+\begin_layout Standard
+Dokumentacija odgovara na praktična pitanja:
+ gdje se nalazi ulazna konfiguracija,
+ gdje se mijenjaju parametri regulatora,
+ koja funkcija generiše .dmodl model,
+ koji su minimalni uslovi za build i kojim redom korisnik treba pokrenuti konverziju.
+\end_layout
+
+\begin_layout Section
+Struktura projekta
+\end_layout
+
+\begin_layout Itemize
+README.md:
+ kratak opis projekta i glavnih direktorija.
+\end_layout
+
+\begin_layout Itemize
+src/:
+ CMake konfiguracija,
+ C++ implementacija plugina,
+ GUI resursi i kompatibilni header za MemoryOut.
+\end_layout
+
+\begin_layout Itemize
+src/plugin/:
+ glavni izvorni kod plugina:
+ TGTIPlugin.cpp,
+ TGTIPlugin.h i ConversionCore.cpp.
+\end_layout
+
+\begin_layout Itemize
+src/res/:
+ resursi plugina,
+ osnovni XML i podrazumijevana TGTI konfiguracija.
+\end_layout
+
+\begin_layout Itemize
+tests/:
+ MATPOWER test primjeri i XML konfiguracije za case9,
+ case30,
+ case118 i case300.
+\end_layout
+
+\begin_layout Itemize
+docs/:
+ LyX dokumentacija i prateće bliješke.
+\end_layout
+
+\begin_layout Subsection
+Korijenski direktorij
+\end_layout
+
+\begin_layout Standard
+Korijenski direktorij src sadrži osnovni README.md,
+ direktorije src,
+ tests,
+ te pomoćni log fajl tgti_plugin_trace.log ako je plugin već pokretan.
+ Materijalist.txt u korijenu je namjerno kratak:
+ njegova uloga je da ukljući src direktorij.
+ Takva organizacija čini projekat preglednim jer su build detalji odvojeni od opisa projekta.
+\end_layout
+
+\begin_layout Subsection
+Direktorij src
+\end_layout
+
+\begin_layout Standard
+src je centralni razvojni direktorij.
+ U njemu se nalaze CMake konfiguracije koje pronalaze natID SDK,
+ uključuju potrebne biblioteke i kreiraju shared library target tgti.
+ Fajl TGTIPlugin.cmake sakuplja C++ izvore i header fajlove,
+ postavlja include direktorije i linkuje natGUI,
+ MatrixLib,
+ SymbComp i mu runtime biblioteke.
+\end_layout
+
+\begin_layout Standard
+Poddirektorij src/plugin sadrži stvarnu implementaciju plugina.
+ TGTIPlugin.cpp se bavi prozorom,
+ kontrolama,
+ dugmadima,
+ plugin interfejsom i threadovima.
+ TGTIPlugin.h definiše podatkovne strukture koje dijele GUI i konverzijsko jezgro.
+ ConversionCore.cpp sadrži parsiranje ulaza i generisanje izlaza.
+ Ova podjela je važna jer odvaja korisnički interfejs od modelskog i fajl-sistemskog dijela aplikacije.
+\end_layout
+
+\begin_layout Subsection
+Direktorij src/res
+\end_layout
+
+\begin_layout Standard
+src/res sadrži resurse plugina.
+ main.xml registruje podrazumijevanu konfiguraciju,
+ dok config/tgti_config.xml sadrži početne vrijednosti broja generatora,
+ simulacionih parametara i TGTI parametara.
+ Direktoriji tr/EN i tr/BA predviđeni su za tekstove interfejsa na engleskom i bosanskom jeziku.
+\end_layout
+
+\begin_layout Subsection
+Direktorij tests
+\end_layout
+
+\begin_layout Standard
+tests sadrži ulazne podatke za provjeru rada.
+ tests/matpower sadrži .m fajlove u MATPOWER stilu,
+ a tests/config sadrži XML fajlove koji biraju generator i parametre regulatora za pojedini slučaj.
+ Ovi fajlovi su smoke-test primjeri:
+ dovoljni su da se provjeri tok konverzije,
+ ali nisu zamjena za punu numeričku validaciju na zvaničnim MATPOWER benchmark podacima.
+\end_layout
+
+\begin_layout Subsection
+Direktorij docs
+\end_layout
+
+\begin_layout Standard
+docs sadrži LyX izvještaje i dokumentaciju.
+ TGTI_notes.lyx je tehnička dokumentacija projekta.
+ Izvještaj_TGTI.lyx je seminarski izvještaj sa teorijom,
+ metodologijom i rezultatima.
+ Kratki_izvještaj_TGTI.lyx je skraćena verzija koja se može koristiti kao sažetak.
+ Direktorij docs/assets sadrži logo fakulteta koji se koristi na naslovnim stranama.
+\end_layout
+
+\begin_layout Section
+Funkcionalni zahtjevi
+\end_layout
+
+\begin_layout Enumerate
+Učitati MATPOWER slučaj iz .m fajla.
+\end_layout
+
+\begin_layout Enumerate
+Prepoznati baznu snagu baseMVA i matricu mpc.gen.
+\end_layout
+
+\begin_layout Enumerate
+Omogućiti izbor generatora koji se modeluje Turbine Governor Type I blokom.
+\end_layout
+
+\begin_layout Enumerate
+Učitati parametre iz XML konfiguracije ako je korisnik navede.
+\end_layout
+
+\begin_layout Enumerate
+Generisati .dmodl DAE model i odgovarajući .vmodl fajl za prikaz osnovnih signala.
+\end_layout
+
+\begin_layout Enumerate
+Prikazati status i procenat izvršenja tokom konverzije.
+\end_layout
+
+\begin_layout Section
+Kratka teorijska osnova
+\end_layout
+
+\begin_layout Standard
+U elektroenergetskom sistemu generator ne posmatramo samo kao statički izvor aktivne i reaktivne snage.
+ U dinamičkoj analizi važno je kako se mehanička snaga turbine mijenja kada dođe do promjene frekvencije,
+ opterećenja ili radne tačke.
+ Regulator turbine utiče na mehanički moment generatora i time učestvuje u stabilizaciji brzine i frekvencije sistema.
+\end_layout
+
+\begin_layout Standard
+MATPOWER daje podatke o radnoj tački,
+ kao sto su aktivna snaga generatora Pg i bazna snaga baseMVA.
+ Ti podaci sami po sebi nisu dinamicki model,
+ ali daju početnu vrijednost oko koje se dinamicki model može linearizovati ili inicijalizovati.
+ U ovom projektu se Pg/baseMVA koristi kao p_order,
+ odnosno kao referentna mehanička snaga generatora u per-unit sistemu.
+\end_layout
+
+\begin_layout Standard
+Turbine Governor Type I se može shvatiti kao niz blokova prvog reda i kompenzacionih blokova.
+ Prvi dio reaguje na odstupanje brzine,
+ zatim se signal ograničava između pmin i pmax,
+ a potom prolazi kroz dinamiku turbine.
+ Zbog ograničenja snage model sadrži i nelinearni dio,
+ sto opravdava zapis u DAE formi.
+\end_layout
+
+\begin_layout Section
+Turbine Governor Type I model
+\end_layout
+
+\begin_layout Standard
+Model se formira oko referentne mehaničke snage generatora i odstupanja brzine od referentne vrijednosti.
+ U implementaciji se koristi p_order,
+ koji se računa iz MATPOWER aktivne snage generatora:
+\end_layout
+
+\begin_layout Standard
+p_order = Pg / baseMVA
+\end_layout
+
+\begin_layout Standard
+Za izabrani generator generišu se varijable u_g,
+ x_g,
+ p_in,
+ x_c i tau_m.
+ Regulator koristi sljedeće relacije:
+\end_layout
+
+\begin_layout Itemize
+u_g = p_order + (omega_ref - omega) / R
+\end_layout
+
+\begin_layout Itemize
+x_g / p_in = 1 / (Ts*s + 1)
+\end_layout
+
+\begin_layout Itemize
+x_c / x_g = (T3*s + 1) / (Tc*s + 1)
+\end_layout
+
+\begin_layout Itemize
+tau_m / x_c = (T4*s + 1) / (T5*s + 1)
+\end_layout
+
+\begin_layout Itemize
+p_in = lim(x_g,
+ pmin,
+ pmax)
+\end_layout
+
+\begin_layout Standard
+Parametar R predstavlja statiku regulatora,
+ Ts vrijeme servomotora,
+ Tc vrijeme kompenzatora,
+ T3,
+ T4 i T5 dodatne vremenske konstante,
+ dok pmin i pmax ograničavaju ulaznu mehaničku snagu.
+\end_layout
+
+\begin_layout Subsection
+Podrazumijevani parametri
+\end_layout
+
+\begin_layout Standard
+U TGTIPlugin.h su definisane podrazumijevane vrijednosti:
+ R = 0.02,
+ Ts = 0.10,
+ Tc = 0.45,
+ T3 = 0.0,
+ T4 = 0.01,
+ T5 = 50.0,
+ pmax = 1.20 i pmin = 0.30.
+ Iste vrijednosti se nalaze i u src/res/config/tgti_config.xml.
+\end_layout
+
+\begin_layout Section
+Ulazni podaci
+\end_layout
+
+\begin_layout Subsection
+MATPOWER slučaj
+\end_layout
+
+\begin_layout Standard
+Konverter očekuje standardni MATPOWER .m fajl sa definisanim mpc.baseMVA i mpc.gen.
+ Parser uklanja MATLAB komentare poslije znaka procenta,
+ čita numeričke redove matrice generatora i provjerava da su svi redovi iste dužine.
+\end_layout
+
+\begin_layout Standard
+Za osnovni rad potrebne su barem prve dvije kolone mpc.gen matrice.
+ Druga kolona se koristi kao aktivna snaga Pg generatora i normalizuje se po baseMVA.
+\end_layout
+
+\begin_layout Subsection
+XML konfiguracija
+\end_layout
+
+\begin_layout Standard
+Konfiguracija je opciona.
+ Ako je navedena,
+ čitaju se atributi Generator number,
+ Simulation maxIter,
+ dTime i endTime,
+ kao i parametri R,
+ Ts,
+ Tc,
+ T3,
+ T4,
+ T5,
+ pmax i pmin.
+\end_layout
+
+\begin_layout Standard
+Primjer konfiguracije:
+\end_layout
+
+\begin_layout LyX-Code
+<TGTIConfiguration>
+\end_layout
+
+\begin_layout LyX-Code
+    <Generator number="1"/>
+\end_layout
+
+\begin_layout LyX-Code
+    <Simulation maxIter="20" dTime="0.005" endTime="10.0"/>
+\end_layout
+
+\begin_layout LyX-Code
+    <Parameters R="0.02" Ts="0.10" Tc="0.45" T3="0.0" T4="0.01" T5="50.0" pmax="1.20" pmin="0.30"/>
+\end_layout
+
+\begin_layout LyX-Code
+</TGTIConfiguration>
+\end_layout
+
+\begin_layout Section
+Izlazni podaci
+\end_layout
+
+\begin_layout Standard
+Glavni rezultat je .dmodl fajl koji sadrži Header sekciju,
+ DAE model,
+ varijable,
+ parametre,
+ prenosne funkcije i nelinearne jednačine.
+ Konverter dodatno kreira .vmodl fajl istog osnovnog imena,
+ namijenjen za prikaz signala p_in,
+ x_g,
+ x_c i tau_m kroz vrijeme.
+\end_layout
+
+\begin_layout Standard
+Ako je uključen model za ostale generatore,
+ za svaki neizabrani generator dodaje se tau_m_i = p_order_i.
+ Time se zadržava pojednostavljena mehanička snaga ostalih generatora,
+ dok se detaljan TGTI blok primjenjuje samo na izabrani generator.
+\end_layout
+
+\begin_layout Section
+Arhitektura implementacije
+\end_layout
+
+\begin_layout Subsection
+Plugin interfejs
+\end_layout
+
+\begin_layout Standard
+Klasa Plugin implementira sc::IPlugin.
+ Glavne metode su show(),
+ getMenuName(),
+ getArchive(),
+ getArchives(),
+ getOutFileName(),
+ getMaxSupportedArchiveParts() i getModelType().
+ Funkcija getPluginInterface() vraća adresu statičke instance plugina,
+ sto omogućava dTwin hostu da učita plugin.
+\end_layout
+
+\begin_layout Subsection
+Grafički interfejs
+\end_layout
+
+\begin_layout Standard
+SimplePluginView gradi prozor sa poljima za MATPOWER ulaz,
+ .dmodl izlaz,
+ XML konfiguraciju,
+ broj generatora,
+ status i progress bar.
+ Dugme Inspect provjerava da ulazni fajl postoji i da sadrži mpc.gen.
+ Dugme Convert pokreće konverziju.
+\end_layout
+
+\begin_layout Standard
+Konverzija se izvršava u worker thread-u,
+ dok progress thread periodički čita ConversionProgress i ažurira gui::ProgressIndicator,
+ tekstualni procenat i statusnu poruku.
+ Destruktor view-a zaustavlja aktivnu konverziju i join-uje threadove.
+\end_layout
+
+\begin_layout Subsection
+Konverzijsko jezgro
+\end_layout
+
+\begin_layout Standard
+Funkcija createTGTIModel() u ConversionCore.cpp je centralni tok konverzije.
+ Redoslijed rada je:
+ učitavanje XML konfiguracije,
+ čitanje MATPOWER slučaja,
+ generisanje DAE teksta,
+ upis u plugin arhive ako su dostupne,
+ upis .dmodl fajla i kreiranje .vmodl fajla.
+\end_layout
+
+\begin_layout Standard
+Status napretka ide kroz vrijednosti 5 posto,
+ 25 posto,
+ 55 posto,
+ 75 posto,
+ 90 posto i 100 posto.
+ U slučaju greške postavlja se failed flag i vraća se opis greške,
+ npr.
+ nemogućnost otvaranja MATPOWER fajla,
+ nepostojanje mpc.gen matrice ili nemogućnost pisanja izlaznog fajla.
+\end_layout
+
+\begin_layout Section
+Build i pokretanje
+\end_layout
+
+\begin_layout Standard
+Projekat očekuje natID SDK u korisničkom direktoriju,
+ na lokaciji USERPROFILE/natID.SDK na Windows sistemu ili HOME/natID.SDK na Unix-like sistemima.
+ CMake konfiguracija u src/Materijalist.txt uključuje natGUI,
+ MatrixLib i SymbComp CMake skripte iz SDK-a.
+\end_layout
+
+\begin_layout Standard
+Build komande iz korijena TGTI projekta:
+\end_layout
+
+\begin_layout LyX-Code
+cmake -S .
+ -B out/build
+\end_layout
+
+\begin_layout LyX-Code
+cmake --build out/build --config Debug
+\end_layout
+
+\begin_layout Standard
+CMake target se zove tgti i gradi se kao shared library:
+ .dll na Windowsu,
+ .dylib na macOS-u ili .so na Linuxu.
+ Opcija TGTI_LINK_RELEASE_NATID_RUNTIME je podrazumijevano uključena radi kompatibilnosti sa dTwin hostom.
+\end_layout
+
+\begin_layout Section
+Upute za korištenje plugina
+\end_layout
+
+\begin_layout Subsection
+Priprema prije pokretanja
+\end_layout
+
+\begin_layout Enumerate
+Provjeriti da je natID SDK instaliran na očekivanoj lokaciji,
+ npr.
+ USERPROFILE/natID.SDK na Windows sistemu.
+\end_layout
+
+\begin_layout Enumerate
+Izgraditi projekat pomoću CMake komandi iz prethodne sekcije.
+\end_layout
+
+\begin_layout Enumerate
+Provjeriti da je nastao shared library plugin tgti,
+ npr.
+ .dll fajl na Windows sistemu.
+\end_layout
+
+\begin_layout Enumerate
+Pripremiti MATPOWER .m fajl i,
+ po potrebi,
+ XML konfiguracioni fajl.
+\end_layout
+
+\begin_layout Subsection
+Pokretanje kroz GUI
+\end_layout
+
+\begin_layout Enumerate
+Otvoriti dTwin/natID host aplikaciju i učitati TGTI plugin.
+\end_layout
+
+\begin_layout Enumerate
+U polju MATPOWER case izabrati ulazni .m fajl.
+\end_layout
+
+\begin_layout Enumerate
+U polju Output .dmodl izabrati gdje ce se snimiti generisani digitalni model.
+\end_layout
+
+\begin_layout Enumerate
+U polju Configuration XML izabrati XML konfiguraciju.
+ Ako se konfiguracija ne odabere,
+ koriste se podrazumijevane vrijednosti iz koda.
+\end_layout
+
+\begin_layout Enumerate
+Unijeti broj generatora koji treba dobiti TGTI model.
+\end_layout
+
+\begin_layout Enumerate
+Kliknuti Inspect da se provjeri da ulazni fajl postoji i sadrži mpc.gen.
+\end_layout
+
+\begin_layout Enumerate
+Kliknuti Convert i pratiti status i progress bar.
+\end_layout
+
+\begin_layout Subsection
+Provjera nakon konverzije
+\end_layout
+
+\begin_layout Enumerate
+Provjeriti da postoji izabrani .dmodl fajl.
+\end_layout
+
+\begin_layout Enumerate
+Provjeriti da je pored njega nastao .vmodl fajl istog osnovnog imena.
+\end_layout
+
+\begin_layout Enumerate
+Otvoriti .dmodl i provjeriti da Header sadrži maxIter,
+ dTime i endTime iz XML konfiguracije.
+\end_layout
+
+\begin_layout Enumerate
+U Params sekciji provjeriti da p_order odgovara vrijednosti Pg/baseMVA iz odabranog reda mpc.gen.
+\end_layout
+
+\begin_layout Enumerate
+Provjeriti da TFs sadrži tri prenosne funkcije TGTI modela i da NLEs sadrži ograničenje p_in = lim(x_g,
+ pmin,
+ pmax).
+\end_layout
+
+\begin_layout Subsection
+Najčešći problemi
+\end_layout
+
+\begin_layout Itemize
+Ako se dobije poruka da MATPOWER fajl ne postoji,
+ treba provjeriti putanju u polju MATPOWER case.
+\end_layout
+
+\begin_layout Itemize
+Ako se prijavi da mpc.gen nije pronađen,
+ ulazni fajl vjerovatno nije u očekivanom MATPOWER obliku.
+\end_layout
+
+\begin_layout Itemize
+Ako XML konfiguracija ne postoji ili je pogrešno izabrana,
+ plugin ce prijaviti grešku prije konverzije.
+\end_layout
+
+\begin_layout Itemize
+Ako se .dmodl ne može upisati,
+ treba provjeriti dozvole foldera i da fajl nije otvoren u programu koji ga zaključava.
+\end_layout
+
+\begin_layout Section
+Detaljan tok podataka
+\end_layout
+
+\begin_layout Standard
+Tok podataka u projektu može se posmatrati kao lanac od korisničog izbora fajlova do formiranja digitalnog modela.
+ Prvi ulaz je MATPOWER .m fajl.
+ Drugi ulaz je XML konfiguracija,
+ koja može biti podrazumijevana ili posebno odabrana za pojedini test.
+ Treći ulaz je broj generatora koji korisnik unosi u GUI.
+ Svi ovi podaci se sabiraju u strukturu TGTIOptions i prosljeđuju funkciji createTGTIModel().
+\end_layout
+
+\begin_layout Enumerate
+GUI čita putanje iz LineEdit kontrola i broj generatora iz NumericEdit kontrole.
+\end_layout
+
+\begin_layout Enumerate
+collectOptions() puni TGTIOptions sa configFileName i generatorNo vrijednostima.
+\end_layout
+
+\begin_layout Enumerate
+createTGTIModel() prvo poziva applyXmlConfig(),
+ čime XML može prepisati podrazumijevane parametre.
+\end_layout
+
+\begin_layout Enumerate
+loadMatpowerCase() učitava baseMVA i redove mpc.gen matrice.
+\end_layout
+
+\begin_layout Enumerate
+appendTGTIModel() generiše tekstualni .dmodl model.
+\end_layout
+
+\begin_layout Enumerate
+writeOutputFile() upisuje .dmodl,
+ a appendTGTIVisualModel() i writeTextFile() formiraju .vmodl.
+\end_layout
+
+\begin_layout Standard
+Ovakva podjela je korisna jer GUI ne sadrži detalje parsiranja niti generisanja modela.
+ Obrnuto,
+ konverzijsko jezgro ne zavisi od konkretnih GUI kontrola,
+ nego dobija već pripremljene opcije i putanje.
+ To olakšava kasnije dodavanje komandne linije ili automatskih testova koji bi direktno pozivali createTGTIModel().
+\end_layout
+
+\begin_layout Section
+Referenca glavnih struktura i funkcija
+\end_layout
+
+\begin_layout Subsection
+TGTIParameters
+\end_layout
+
+\begin_layout Standard
+TGTIParameters predstavlja skup fizičkih i numeričkih parametara regulatora.
+ U njoj se nalaze R,
+ Ts,
+ Tc,
+ T3,
+ T4,
+ T5,
+ pmax i pmin.
+ Struktura ima podrazumijevane vrijednosti,
+ pa konverzija može raditi i bez XML konfiguracije.
+ XML fajl je zato mehanizam za promjenu parametara,
+ a ne obavezan ulaz.
+\end_layout
+
+\begin_layout Subsection
+TGTIOptions
+\end_layout
+
+\begin_layout Standard
+TGTIOptions objedinjuje sve opcije koje utiču na generisani model.
+ Pored TGTIParameters,
+ sadrži modelName,
+ configFileName,
+ selectedCaseName,
+ generatorNo,
+ maxIter,
+ dTime,
+ endTime i useStandardForOthers.
+ maxIter,
+ dTime i endTime se direktno upisuju u Header sekciju .dmodl fajla.
+ generatorNo određuje koji red matrice mpc.gen postaje detaljni TGTI generator.
+\end_layout
+
+\begin_layout Subsection
+ConversionProgress
+\end_layout
+
+\begin_layout Standard
+ConversionProgress je mala komunikacijska struktura između worker thread-a i progress thread-a.
+ Sadrži atomske vrijednosti percent,
+ running,
+ completed i failed,
+ te tekstualnu poruku zaštićenu mutex-om.
+ Ovakav pristup smanjuje rizik od istovremenog čitanja i pisanja statusne poruke iz dvije niti.
+\end_layout
+
+\begin_layout Subsection
+createTGTIModel()
+\end_layout
+
+\begin_layout Standard
+createTGTIModel() je centralna funkcija projekta.
+ Njen potpis prima ulazni MATPOWER fajl,
+ izlazni fajl,
+ opcioni pokazivač na sc::IPlugin,
+ opcije konverzije,
+ progress objekat i status string.
+ Ako se funkcija pozove iz dTwin hosta sa dostupnim arhivama,
+ ona može pisati i u plugin arhive.
+ Ako se pozove bez plugina,
+ kao u trenutnoj GUI file-only konverziji,
+ ona svejedno generiše fizičke .dmodl i .vmodl fajlove.
+\end_layout
+
+\begin_layout Section
+Format generisanog .dmodl fajla
+\end_layout
+
+\begin_layout Standard
+Generisani .dmodl fajl ima nekoliko predvidljivih sekcija.
+ Header određuje numeričke parametre simulacije.
+ Vars sadrži inicijalne vrijednosti promjenljivih.
+ Params sadrži parametre regulatora i referentne vrijednosti.
+ TFs opisuje linearne prenosne funkcije.
+ NLEs sadrži nelinearne relacije,
+ uključujući ograničenje snage i placeholder jednačine ostalih generatora.
+\end_layout
+
+\begin_layout LyX-Code
+Header:
+\end_layout
+
+\begin_layout LyX-Code
+    maxIter = 20
+\end_layout
+
+\begin_layout LyX-Code
+    dTime = 0.005000
+\end_layout
+
+\begin_layout LyX-Code
+    endTime = 10.000000
+\end_layout
+
+\begin_layout LyX-Code
+end
+\end_layout
+
+\begin_layout Standard
+U Vars sekciji inicijalne vrijednosti u_g,
+ x_g,
+ p_in,
+ x_c i tau_m počinju od p_order.
+ To daje konzistentno početno stanje u kojem se svi elementi regulatora inicijalno nalaze oko radne tačke iz MATPOWER generatora.
+\end_layout
+
+\begin_layout Section
+Rukovanje greškama
+\end_layout
+
+\begin_layout Standard
+Konverter vraca opisne greške za najvažnije probleme.
+ Ako se MATPOWER fajl ne može otvoriti,
+ status postaje "ERROR!
+ Cannot open MATPOWER case.".
+ Ako mpc.gen nije pronađen,
+ status postaje "ERROR!
+ MATPOWER mpc.gen matrix was not found.".
+ Ako redovi generatora nemaju isti broj kolona,
+ prijavljuje se nekonzistentna dužina redova.
+ Ako se izlazni .dmodl ne može upisati,
+ status je "ERROR!
+ Cannot write output .dmodl file.".
+\end_layout
+
+\begin_layout Standard
+GUI prije same konverzije radi dodatne provjere:
+ da li ulazni fajl postoji,
+ da li izlazna putanja nije prazna i da li opcioni XML fajl postoji.
+ Na taj način se dio grešaka hvata prije pokretanja worker thread-a,
+ sto korisniku daje brži feedback.
+\end_layout
+
+\begin_layout Section
+Testiranje i validacija
+\end_layout
+
+\begin_layout Standard
+Direktorij tests sadrži kompaktne smoke-test MATPOWER primjere:
+ case9.m,
+ case30.m,
+ case118.m i case300.m,
+ uz odgovarajuće XML konfiguracije.
+ Trenutni test fajlovi su pripremljeni za provjeru toka konverzije,
+ ali ih treba zamijeniti zvaničnim ili od profesora dostavljenim MATPOWER podacima za konačnu validaciju.
+\end_layout
+
+\begin_layout Standard
+Preporučeni postupak validacije:
+\end_layout
+
+\begin_layout Enumerate
+Pokrenuti build na mašini sa instaliranim C++ kompajlerom i natID SDK-om.
+\end_layout
+
+\begin_layout Enumerate
+Učitati plugin u dTwin host aplikaciju.
+\end_layout
+
+\begin_layout Enumerate
+Za svaki test slučaj izabrati MATPOWER .m fajl,
+ odgovarajući XML i izlazni .dmodl put.
+\end_layout
+
+\begin_layout Enumerate
+Provjeriti da konverzija završava sa statusom "Conversion completed.
+ Matching .vmodl plot file was created."
+\end_layout
+
+\begin_layout Enumerate
+Otvoriti generisani .dmodl i provjeriti Header,
+ Params,
+ TFs i NLEs sekcije.
+\end_layout
+
+\begin_layout Enumerate
+Uporediti p_order vrijednosti sa Pg/baseMVA iz MATPOWER slučaja.
+\end_layout
+
+\begin_layout Section
+Poznata ograničenja
+\end_layout
+
+\begin_layout Itemize
+Parser je namjenski i čita samo dijelove MATPOWER fajla koji su potrebni za ovaj projekat.
+ Ne implementira kompletan MATLAB parser.
+\end_layout
+
+\begin_layout Itemize
+XML čitanje koristi jednostavno traženje atributa po tekstu.
+ Zbog toga konfiguracija treba ostati u predviđenom formatu.
+\end_layout
+
+\begin_layout Itemize
+Vizuelni model je osnovni .vmodl prikaz signala i može se proširiti kada se definiše potpun dTwin vizuelni format za projekat.
+\end_layout
+
+\begin_layout Itemize
+Trenutni smoke-test slučajevi nisu zamjena za punu validaciju nad zvaničnim MATPOWER benchmark fajlovima.
+\end_layout
+
+\begin_layout Section
+Zaključak
+\end_layout
+
+\begin_layout Standard
+TGTI plugin povezuje MATPOWER ulazne podatke sa dTwin DAE formatom i omogućava izradu dinamičkog Turbine Governor Type I modela za izabrani generator.
+ Implementacija obuhvata GUI za izbor fajlova,
+ konfigurabilne parametre regulatora,
+ pozadinsku konverziju sa progress prikazom i generisanje .dmodl/.vmodl izlaza.
+ Projekat je spreman za build i validaciju u okruženju sa instaliranim natID SDK-om i dTwin host aplikacijom.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1 @@
+Predviđeno trajanje prezentacije: 7min 30sec
