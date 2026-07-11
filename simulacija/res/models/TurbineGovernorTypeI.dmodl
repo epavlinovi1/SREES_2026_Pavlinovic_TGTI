@@ -1,0 +1,48 @@
+Header:
+	maxIter = 20 	//Maximum number of iterations for NL, WLS, and DAE problems
+	report = Solved 	//Only successfully solved cases. Other options: All - shows solved and nonSolved with iterations, AllWithDetails - All + debug information.
+	maxReps = -1 	//Used to limit repetitions (-1: no limit)
+	outToTxt = false 	//true: create output txt file for results, fale: output file was not created
+	txtFile = "" 	//only valid if outToTxt was set to true
+	startTime = 0	//Solution start time for time domain (ODE and DAE) problems
+	dTime = 0.005	//Integration time step for time domain (ODE and DAE) problems
+	endTime = 30	//Solution end time step for time domain (ODE and DAE) problems
+end
+// Blok struktura iz knjige:
+//   u_g = p_order + (omega_ref - omega)/R
+//   p_in = lim(x_g, pmin, pmax)                 ogranicenja ulaza turbine
+//   x_g / p_in = 1 / (Ts*s + 1)                  governor
+//   x_c / X_g = (T3*s + 1) / (Tc*s + 1)                 servo
+//   tau_m / x_c = (T4*s + 1) / (T5*s + 1)         prelazno pojacanje
+
+
+Model [type=DAE domain=real method=RK4 name="Turbine Governor Type I"]:
+Vars [out=true]:
+	u_g = 0.70		// ulazni signal governora
+	x_g = 0.70		// stanje/izlaz governora prije ogranicenja
+	p_in = 0.70		// ograniceni ulaz turbine
+	x_c = 0.70		// servo izlaz
+	tau_m = 0.70		// aproksimacija mehanickog momenta
+
+Params:
+	p_order = 0.70 [out=true]
+	omega_ref = 1.00
+	omega = 0.99 [out=true]
+	R = 0.02 [out=true]
+	Ts = 0.10 [out=true]
+	Tc = 0.45 [out=true]
+	T3 = 0.00 [out=true]
+	T4 = 0.01 [out=true]
+	T5 = 50.00 [out=true]
+	pmax = 1.20 [out=true]
+	pmin = 0.30 [out=true]
+
+TFs:
+	x_g/p_in = 1/(Ts*s + 1)
+	x_c/x_g = (T3*s + 1)/(Tc*s + 1)
+	tau_m/x_c = (T4*s + 1)/(T5*s + 1)
+
+NLEs:
+	u_g = p_order + (omega_ref - omega)/R
+	p_in = lim(x_g, pmin, pmax)
+end

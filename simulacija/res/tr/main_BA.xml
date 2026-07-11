@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevRes>
+	<Translations>
+		<Res id="appTitle" tr="Turbine Governor Type I"/>
+		<Res id="start" tr="Pokreni"/>
+		<Res id="startTT" tr="Pokreni simulaciju"/>
+		<Res id="stop" tr="Zaustavi"/>
+		<Res id="stopTT" tr="Zaustavi simulaciju"/>
+		<Res id="reset" tr="Resetuj"/>
+		<Res id="resetTT" tr="Vrati simulaciju na pocetak"/>
+		<Res id="simulation" tr="Simulacija"/>
+		<Res id="lblParams" tr="Parametri TG Type I"/>
+		<Res id="lblR" tr="Droop R [pu]"/>
+		<Res id="lblTs" tr="Governor Ts [s]"/>
+		<Res id="lblTc" tr="Servo Tc [s]"/>
+		<Res id="lblT3" tr="Transient gain T3 [s]"/>
+		<Res id="lblT4" tr="Transient gain T4 [s]"/>
+		<Res id="lblT5" tr="Reheat T5 [s]"/>
+		<Res id="lblGridFrequency" tr="Frekvencija mreze nakon pada [Hz]"/>
+		<Res id="lblValR" tr="R:"/>
+		<Res id="lblValTs" tr="Ts:"/>
+		<Res id="lblValTc" tr="Tc:"/>
+		<Res id="lblValT3" tr="T3:"/>
+		<Res id="lblValT4" tr="T4:"/>
+		<Res id="lblValT5" tr="T5:"/>
+		<Res id="lblValGridFrequency" tr="f mreze [Hz]:"/>
+		<Res id="closeNOK" tr="Simulacija je u toku"/>
+		<Res id="closeErr" tr="Zaustavite simulaciju prije zatvaranja aplikacije."/>
+		<Res id="Quit" tr="Kraj"/>
+		<Res id="App" tr="App"/>
+	</Translations>
+</DevRes>

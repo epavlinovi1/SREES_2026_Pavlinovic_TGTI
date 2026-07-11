@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevRes>
+	<Translations>
+		<Res id="appTitle" tr="Turbine Governor Type I"/>
+		<Res id="start" tr="Start"/>
+		<Res id="startTT" tr="Start simulation"/>
+		<Res id="stop" tr="Stop"/>
+		<Res id="stopTT" tr="Stop simulation"/>
+		<Res id="reset" tr="Reset"/>
+		<Res id="resetTT" tr="Reset simulation"/>
+		<Res id="simulation" tr="Simulation"/>
+		<Res id="lblParams" tr="TG Type I parameters"/>
+		<Res id="lblR" tr="Droop R [pu]"/>
+		<Res id="lblTs" tr="Governor Ts [s]"/>
+		<Res id="lblTc" tr="Servo Tc [s]"/>
+		<Res id="lblT3" tr="Transient gain T3 [s]"/>
+		<Res id="lblT4" tr="Transient gain T4 [s]"/>
+		<Res id="lblT5" tr="Reheat T5 [s]"/>
+		<Res id="lblGridFrequency" tr="Grid frequency after drop [Hz]"/>
+		<Res id="lblValR" tr="R:"/>
+		<Res id="lblValTs" tr="Ts:"/>
+		<Res id="lblValTc" tr="Tc:"/>
+		<Res id="lblValT3" tr="T3:"/>
+		<Res id="lblValT4" tr="T4:"/>
+		<Res id="lblValT5" tr="T5:"/>
+		<Res id="lblValGridFrequency" tr="grid f [Hz]:"/>
+		<Res id="closeNOK" tr="Simulation is running"/>
+		<Res id="closeErr" tr="Stop simulation before closing the application."/>
+		<Res id="Quit" tr="Quit"/>
+		<Res id="App" tr="App"/>
+	</Translations>
+</DevRes>
